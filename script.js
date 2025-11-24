@@ -146,3 +146,17 @@ window.addEventListener('click', (event) => {
     event.target.style.display = 'none';
   }
 });
+document.querySelector('#slideCatalogo a.btn-hero').addEventListener('click', function(event) {
+  event.preventDefault();
+
+  const accordionBtn = document.querySelector('.accordion-btn');
+  const accordionContent = document.querySelector('#catalogContent');
+
+  // Abre o acordeão
+  accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+
+  // Rola até ele
+  accordionContent.scrollIntoView({
+      behavior: "smooth"
+  });
+});

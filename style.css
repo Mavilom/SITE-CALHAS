@@ -151,25 +151,55 @@
   
   /* INTRO TEXTO */
   .intro {
-    margin-top: 32px;
-    padding-bottom: 10px;
+    text-align: left;
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0;
   }
   
   .intro h1 {
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    margin-bottom: 8px;
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
   }
   
   .intro p {
-    font-size: 1rem;
-    max-width: 560px;
-    color: #f3f3f3;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 40px;
   }
   
-  .intro strong {
-    color: var(--amarelo);
+  .btn-intro {
+    display: flex;
+    margin-top: 20px;
   }
+  @media (max-width: 768px) {
+    nav {
+      display: none; /* esconde o menu grande */
+    }
+  
+    .intro {
+      padding: 20px;
+      margin: 0;
+      text-align: center;
+    }
+  
+    .intro h1 {
+      font-size: 26px;
+    }
+  
+    .intro p {
+      font-size: 16px;
+    }
+  
+    header img {
+      max-width: 150px; /* ajusta o logo no celular */
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  
+  
   
   /* botão principal */
   .glow-on-hover {
@@ -864,4 +894,7 @@
     transform: translateY(0);
   }
 }
-
+/*Catalogo do dinamico*/
+#slideCatalogo {
+  cursor: pointer;
+}
