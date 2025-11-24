@@ -2,20 +2,24 @@
   // Troque estes caminhos pelas suas imagens
   const photos = [
     {
-      src: "https://images.pexels.com/photos/91224/pexels-photo-91224.jpeg",
+      src: "img1.jpg",
       alt: "Exemplo 1 - Produto em destaque"
     },
     {
-      src: "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg",
+      src: "img2.jpg",
       alt: "Exemplo 2 - Produto em ambiente"
     },
     {
-      src: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg",
+      src: "img3.jpg",
       alt: "Exemplo 3 - Detalhe do produto"
     },
     {
-      src: "https://images.pexels.com/photos/264537/pexels-photo-264537.jpeg",
+      src: "img4.jpg",
       alt: "Exemplo 4 - Vitrine de produtos"
+    },
+    {
+      src: "img5.jpg",
+      alt: "Exemplo 5 - Primeiro de produtos"
     }
   ];
 
@@ -100,3 +104,14 @@
   // Inicializa
   createPages();
 
+  const btn = document.querySelector(".accordion-btn");
+  const content = document.getElementById("catalogContent");
+  
+  btn.addEventListener("click", () => {
+      if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+      } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+      }
+  });
+  

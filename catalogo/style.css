@@ -124,4 +124,80 @@
       justify-content: center;
     }
   }
-  
+/* Centralização do wrapper */
+.wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.link_wrapper {
+  position: relative;
+}
+
+/* Agora o botão recebe o estilo do seu <a> */
+.accordion-btn {
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+  cursor: pointer;
+  border-radius: 0; /* Para ficar igual ao seu estilo original */
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
+
+.icon svg {
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #2ecc71;
+  transition: all .35s;
+}
+
+/* Efeitos de hover */
+.accordion-btn:hover {
+  width: 200px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #2ecc71;
+}
+
+.accordion-btn:hover + .icon {
+  border: 3px solid #2ecc71;
+  right: -25%;
+}
+
+/* Conteúdo do acordeão */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: #f5f5f5;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 0 15px;
+}
