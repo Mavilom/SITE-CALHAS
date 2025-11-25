@@ -9,7 +9,7 @@
   /* Container padrão */
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
   }
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
@@ -35,7 +35,7 @@
   }
   
   body {
-    font-family: "Poppins", Arial, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background: var(--bg-body);
     color: var(--texto);
     line-height: 1.5;
@@ -86,7 +86,7 @@
   
   /* logo */
   .logo img {
-    max-width: 220px;
+    max-width: 150px;
   }
   
   /* menu */
@@ -155,6 +155,21 @@
     padding: 40px 20px;
     max-width: 600px;
     margin: 0;
+    
+  }
+  .img-2{
+    position: absolute;
+    left: 55rem;
+    top: 13rem;
+    right: 0px;
+    width: 480px; /* ajuste como quiser */
+    animation: pulse 20s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(0.5); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(0.5); }
   }
   
   .intro h1 {
@@ -553,23 +568,23 @@
   /* =========================================================
      CONTATO CTA
   ========================================================= */
-  .contato {
+  .contat {
     background: var(--azul);
     color: #fff;
     text-align: center;
     padding: 60px 0;
   }
   
-  .contato h2 {
+  .contat h2 {
     font-size: 1.9rem;
     margin-bottom: 8px;
   }
   
-  .contato p {
+  .contat p {
     margin-bottom: 18px;
   }
   
-  .contato .btn {
+  .contat .btn {
     background: var(--amarelo);
     color: var(--azul-esc);
     padding: 10px 20px;
@@ -582,7 +597,7 @@
     transition: transform var(--transition), background var(--transition);
   }
   
-  .contato .btn:hover {
+  .contat .btn:hover {
     background: var(--amarelo-esc);
     transform: translateY(-2px);
   }
@@ -747,8 +762,10 @@
     background: #020715;
     color: #fff;
     text-align: center;
-    padding: 20px 0 16px;
+    padding: 40px 0 26px;
     font-size: 0.9rem;
+    position: relative;
+    top:-5px;
   }
   
   footer small {
@@ -897,4 +914,55 @@
 /*Catalogo do dinamico*/
 #slideCatalogo {
   cursor: pointer;
+}
+
+/* Estado inicial invisível */
+/*===============================================
+                MODAL IMAGEM
+===============================================*/
+.modal-img {
+  width: 200%;
+  height: auto;
+  margin: 10px 0 20px 0;
+  border-radius: 10px;
+}
+/*=========================================================
+          BOTAO WHATS NO CANTO DIREITO
+===========================================================*/
+.whts {
+  position: fixed;
+  bottom: 20px;   /* distancia do rodapé */
+  right: 30px;    /* distancia da borda direita */
+  background-color: #25d366;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 22px;
+  z-index: 9999; /* garante que fica por cima */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform .2s;
+  height:40px;
+   /* animação de flutuação */
+  animation: flutuar 2.5s infinite ease-in-out;
+}
+@keyframes flutuar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.whts a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.whts:hover {
+  transform: scale(1.1);
+}
+.whts a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  top: -5px;
 }
